@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="day2">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script>
+
+      angular.module('day2',[]);
+
+      angular.module("day2")
+              .factory('Data',function(){
+                  return {message : 'this is my data'};
+              })
+              .controller('Ctrl', function($scope,Data){
+
+                  this.message = Data;
+              });
+
+
+  </script>
+</head>
+<body ng-controller="Ctrl">
+  {{message}}
+</body>
+</html>
